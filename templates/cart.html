@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="../static/css/cart.css">
+    <link rel="stylesheet" href="../static/css/home.css ">
+</head>
+<body>
+    <header class="cart-header">
+        <h1>Your Shopping Cart</h1>
+        <nav class="navbar">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="cart-container">
+        <section id="cart-items">
+            <!--Your cart items-->
+        </section>
+
+        <aside class="cart-summary">
+            <h2>Order Summary</h2>
+            <p id="subtotal">Subtotal: $0.00</p>
+            <p id="taxes">Taxes: ₦0.00</p>
+            <p id="total">Total: ₦0.00</p>
+            
+            <button id="checkoutButton"><a href="/contact">Proceed to contact</a></button>
+        </aside>
+    </main>
+
+    <script src="../static/js/cart.js"></script>
+
+</body>
+</html>

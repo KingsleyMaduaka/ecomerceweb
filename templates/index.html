@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Materials Store</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Bakery Materials</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search" id="searchInput">
+            <button id="searchButton">Search</button>
+        </div>
+        
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </nav>
+        <div class="cart-container">
+            <span class="cart-icon"> <a href="/cart">🛒</a></span>
+           <span class="cart-count">0</span>
+            <div class="cart-details hidden">
+                <h3>Cart Items</h3>
+                <ul class="cart-items"></ul>
+            </div>
+
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <h2>Premium Baking Ingredients and Tools</h2>
+        <p>Everything you need to create amazing bakery items delivered to your door!</p>
+        <a href="#products" class="cta-button">Shop Now</a>
+    </section>
+
+    <section class="image-section">
+        <img src="../static/images/heropic/baked1.jpg" alt="" class="full-width-image">
+    </section>
+
+    <!--promotion section -->
+    <section class="promotions">
+        <h3>Current promotions</h3>
+        <div class="promo-items">
+            <div class="promo-item">
+                <h4>Free Shipping</h4>
+                <p>On all Orders above £250. Shop now and save more!</p>
+
+            </div>
+            <div class="promo-item">
+                <h4>Sign-up bonus</h4>
+                <p>Register now and receive a free gift coupon</p>
+            </div>
+            <div class="promo-item">
+                <h4>Holidays Discount</h4>
+                <p>Get upto 30% off on selected categories</p>
+            </div>
+        </div>
+    </section>
+    <section class="image-section">
+        <img src="../static/images/heropic/people-bakeryfactory.jpg" alt="" class="full-width-image">
+    </section>
+
+    <!--Value section -->
+    <section class="values">
+        <h3>Why shop with us</h3>
+        <div class="value-items">
+            <div class="value-item">
+                <h4>Secure payments</h4>
+                <p>Your transactions are 100% safe and secured.</p>
+
+            </div>
+            <div class="value-item">
+                <h4>Easy returns</h4>
+                <p>Hassle-free returns for seamless shopping.</p>
+            </div>
+            <div class="value-item">
+                <h4>24/7 Support</h4>
+                <p>Our team is here to assist you anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products-section">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <!-- Example Products -->
+            <div class="product-card" data-id="1">
+                <img src="../static/images/butter/amanda.jpeg" alt="Flour">
+                <h3>Amanda 15KG Margarine</h3>
+                <p>₦41000.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="2">
+                <img src="../static/images/yeast/angel_yeast.jpg" alt="Angel Yeast">
+                <h3>Angel Instant Dry Yeast</h3>
+                <p>₦41000.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="3">
+                <img src="../static/images/butter/simas.jpeg" alt="Simas Margarine">
+                <h3>Simas 15KG Margarine</h3>
+                <p>₦41000.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="4">
+                <img src="../static/images/butter/gloria.jpeg" alt="Gloria Margarine">
+                <h3>Gloria 15KG Margarine</h3>
+                <p>₦41000.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Example Products -->
+            <div class="product-card" data-id="5">
+                <img src="../static/images/butter/derich.jpeg" alt="DeRich Yeast">
+                <h3>De Rich instant Dry Yeast</h3>
+                <p>₦41000.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="6">
+                <img src="../static/images/yeast/bakerdream_yeast.jpg" alt="BakerDream Yeast">
+                <h3>BakerDream instant Dry Yeast</h3>
+                <p>₦41000.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="7">
+                <img src="../static/images/butter/haano.jpeg" alt="Haano">
+                <h3>Haano 15KG Margarine</h3>
+                <p>₦41000.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="8">
+                <img src="../static/images/butter/stk_butter.jpeg" alt="STK Margarine">
+                <h3>STK 15KG Margarine</h3>
+                <p>₦41000.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Example Products -->
+            <div class="product-card" data-id="9">
+                <img src="../static/images/logo/IMG_4262.jpg" alt="Flour">
+                <h3>Discount Sale</h3>
+                <p>₦0.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="10">
+                <img src="../static/images/yeast/fabao_yeast.jpeg" alt="Fabao Yeast">
+                <h3>Fabao instant Dry Yeast</h3>
+                <p>₦41000.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="11">
+                <img src="../static/images/butter/vitali.jpeg" alt="Vitali Margarine">
+                <h3>Vitali 15KG Margarine</h3>
+                <p>₦41000.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="12">
+                <img src="../static/images/dependox.jpeg" alt="Dependox Preserve">
+                <h3>Dependox Preserve</h3>
+                <p>₦65000.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Bakery Materials Store. All rights reserved.</p>
+    </footer>
+
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
