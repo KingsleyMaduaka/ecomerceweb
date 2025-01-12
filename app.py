@@ -47,6 +47,7 @@ def send_email():
 
     name = data.get('name', '').strip()
     email = data.get('email', '').strip()
+    phoneNumber = data.get('phoneNumber', '').strip()
     message = data.get('message', '').strip()
 
 
@@ -63,9 +64,9 @@ def send_email():
     try:
         msg = Message(
             subject = f"Contact Form Submission from {name}",
-            sender=email,
-            recipients = ['sitathome20@gmail.com'],
-            body=message,
+            sender = email,
+            recipients = ['makeltopaz001@gmail.com'],
+            body= f"from:  {name} \nemail:  {email} \nphone number:  {phoneNumber} \n\nMessage:  {message}",
         )
         mail.send(msg)
         return "Email sent succefully!"
@@ -77,4 +78,4 @@ def send_email():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True)
