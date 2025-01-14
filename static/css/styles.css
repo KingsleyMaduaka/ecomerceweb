@@ -247,3 +247,15 @@ button.added{
     text-align: center;
     background-color: #f9f9f9;
 }
+
+@media(max-width: 768px){
+    .product-grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media(max-width: 480px){
+    .product-grid{
+        grid-template-columns: repeat(3, 2fr);
+    }
+}

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, url_for, redirect
 import re
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
@@ -34,14 +34,14 @@ def cart():
 def about():
     return render_template("about.html")
 
-@app.route("/contact")
+@app.route("/contact", methods=['GET', 'POST'])
 def contact():
     return render_template("contact.html")
 
 
 
 #email sending route
-@app.route('/send-email', methods=['POST'])
+@app.route('/send-email', methods=['GET','POST'])
 def send_email():
     data = request.get_json()
 
@@ -69,13 +69,14 @@ def send_email():
             body= f"from:  {name} \nemail:  {email} \nphone number:  {phoneNumber} \n\nMessage:  {message}",
         )
         mail.send(msg)
-        return "Email sent succefully!"
+        return  "Email sent successfully"
+    
     except Exception as e:
         print(e)
-        return "Failed to send email.", 500
+        return  "Failed to send email"
     
 
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8080)
