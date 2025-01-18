@@ -168,14 +168,18 @@ header{
 .product-card img {
     width: 100%;
     height: 150px;
+    width: 200px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 10px;
+    display: block;
 }
 
 .product-card h3 {
     font-size: 18px;
-    margin: 10px 0;
+    margin: 10px 0 0 10px;
+    display: inline-block;
+
 }
 
 .product-card p {
@@ -252,10 +256,31 @@ button.added{
     .product-grid{
         grid-template-columns: repeat(4, 1fr);
     }
+
+    .product-card img {
+        width: 100%;
+        height: 50px;
+        width: 100px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        display: block;
+    }
 }
 
 @media(max-width: 480px){
     .product-grid{
-        grid-template-columns: repeat(3, 2fr);
+        grid-template-columns: repeat(3, 1fr);
     }
+
+    .product-card img {
+        width: 100%;
+        height: 50px;
+        width: 70px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        display: block;
+    }
+
 }

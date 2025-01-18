@@ -65,7 +65,7 @@ def send_email():
         msg = Message(
             subject = f"Contact Form Submission from {name}",
             sender = email,
-            recipients = ['makeltopaz001@gmail.com'],
+            recipients = ['makeltopaz001@gmail.com', 'benchuks144@gmail.com'],
             body= f"from:  {name} \nemail:  {email} \nphone number:  {phoneNumber} \n\nMessage:  {message}",
         )
         mail.send(msg)
