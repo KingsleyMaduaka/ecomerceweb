@@ -21,8 +21,8 @@
                 <form action="/send-email" id="contactForm" method="POST">
                     <label for="name">Name</label>
                     <input type="text" id="name" placeholder="Enter your name" required>
-                    <label for="phoneNumber">Phone Number</label>
-                    <input type="number" id="phoneNumber" placeholder="Enter your Phone Number">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+1234567890">
                     <label for="email">Email</label>
                     <input type="email" id="email" placeholder="Enter your Email" required>
                     <label for="message">Message</label>
@@ -46,8 +46,13 @@
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
-            const phoneNumber = document.getElementById('phoneNumber').value.trim();
-
+            const phoneNumber = document.getElementById('phone').value;
+            
+            const phoneRegex = /^\+?\d{10,14}$/;
+            if(phoneNumber && !phoneRegex.test(phoneNumber)){
+                alert('Please enter a valid phone number.');
+                return;
+            }
             //client side validation
             if(!name || name.length < 3){
                 alert('Please enter a valid name');

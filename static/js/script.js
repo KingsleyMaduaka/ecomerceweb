@@ -135,5 +135,21 @@ document.querySelectorAll(".product-card button").forEach(button => {
     })
 })
 
+
+function toggleMenu(){
+    let menu = document.querySelector(".nav-links");
+    let icon = document.querySelector(".menu-icon");
+
+    menu.classList.toggle("active");
+
+    if(menu.classList.contains("active")){
+        icon.innerHTML = "&#10006";
+    }
+    else{
+        icon.innerHTML = "&#9776"
+    }
+
+}
+
 saveCart2();
 updateCartCount();

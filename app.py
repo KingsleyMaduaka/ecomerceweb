@@ -59,6 +59,12 @@ def send_email():
     if not message or len(message) < 10:
         return jsonify({"error": "Message must be at least 10 characters long"}), 400
     
+    if not phoneNumber:
+        return jsonify({"error": "Phone number is required"}), 400
+    
+    if not phoneNumber.startswith('+') or not phoneNumber[1:].isdigit() or len(phoneNumber) < 11:
+        return jsonify({"error": "Invalid phone number"}), 400
+    
 
 
     try:

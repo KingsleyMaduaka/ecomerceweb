@@ -5,6 +5,8 @@ body {
     padding: 0;
     color: #333;
     background-color: #f9f9f9;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 /* Header Styles */
@@ -90,6 +92,9 @@ header{
     color: white;
     padding: 15px 20px;
     padding-right: 100px;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 .header .logo h1 {
@@ -97,12 +102,22 @@ header{
     margin: 0;
 }
 
-.navbar a {
+.nav-links{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
-    font-size: 16px;
+    padding: 8px 12px;
     
+}
+
+.menu-icon{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .navbar a:hover {
@@ -175,10 +190,22 @@ header{
     display: block;
 }
 
+.product-card h3, p{
+    max-width: 100%;
+    font-size: 14px;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
 .product-card h3 {
     font-size: 18px;
     margin: 10px 0 0 10px;
     display: inline-block;
+    
 
 }
 
@@ -254,23 +281,51 @@ button.added{
 
 @media(max-width: 768px){
     .product-grid{
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .navbar, .header{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
     }
 
-    .product-card img {
+    .nav-links{
+        flex-direction: column;
         width: 100%;
-        height: 50px;
-        width: 100px;
-        object-fit: cover;
-        border-radius: 8px;
-        margin-bottom: 10px;
+        display: none;
+        
+        
+    }
+    .menu-icon{
         display: block;
     }
+   
+
+    .nav-links a{
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+        
+    }
+
+   
 }
 
 @media(max-width: 480px){
     .product-grid{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+   
+
+    .product-card h3, p, .promo-item, .value-item, .hero-section p{
+        max-width: 100%;
+        font-size: 12px;
+        height: 30px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
     }
 
     .product-card img {
@@ -279,8 +334,12 @@ button.added{
         width: 70px;
         object-fit: cover;
         border-radius: 8px;
-        margin-bottom: 10px;
-        display: block;
+        display: flex;
+        justify-content: center;
+        
     }
 
+}
+.nav-links.active{
+    display: flex;
 }
